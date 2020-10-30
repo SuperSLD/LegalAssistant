@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LegalAssistant</string>
+    <string name="splash_first_word">Legal</string>
+    <string name="splash_second_word">Assistant</string>
+    <string name="consultation">Нужна консультация</string>
+    <string name="ready_solutions">Готовые решения</string>
+</resources>
