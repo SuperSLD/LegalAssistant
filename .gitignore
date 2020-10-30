@@ -1,0 +1,31 @@
+*.iml
+*.properties
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Build files and folders
+.gradle/
+build/
+keys/
+ 
+# Properties
+local.properties
+ 
+# Idea
+.idea/
+**/*.iml
+ 
+# Mac OS
+.DS_Store
+LegalAssistantWeb/src/main/resources/config.properties
