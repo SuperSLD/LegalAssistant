@@ -3,4 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <servlet>
+        <servlet-name>createlist</servlet-name>
+        <servlet-class>servlets.CreateListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createlist</servlet-name>
+        <url-pattern>/createlist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getlist</servlet-name>
+        <servlet-class>servlets.GetListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getlist</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getitem</servlet-name>
+        <servlet-class>servlets.GetItemServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getitem</servlet-name>
+        <url-pattern>/item</url-pattern>
+    </servlet-mapping>
 </web-app>
