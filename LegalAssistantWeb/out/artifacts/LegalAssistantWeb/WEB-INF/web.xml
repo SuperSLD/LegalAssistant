@@ -23,11 +23,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>getitem</servlet-name>
-        <servlet-class>servlets.GetItemServlet</servlet-class>
+        <servlet-name>messageresponse</servlet-name>
+        <servlet-class>servlets.MessageResponseServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>getitem</servlet-name>
-        <url-pattern>/item</url-pattern>
+        <servlet-name>messageresponse</servlet-name>
+        <url-pattern>/message</url-pattern>
     </servlet-mapping>
 </web-app>

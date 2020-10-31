@@ -12,23 +12,28 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
 
-public class GetItemServlet extends HttpServlet {
+public class MessageResponseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("windows-1251");
+
         JSONObject object = new JSONObject();
         PrintWriter writer = resp.getWriter();
 
         try {
-            ResultSet rs = DBConnector.executeQuery("SELECT id, title, subtitle, text, pdf, link FROM legal_assistiant.legal_support" +
-                    " WHERE id = '"+req.getParameter("id")+"'");
-            if (rs.next()) {
-                object.put("id", rs.getString("id"));
-                object.put("title", rs.getString("title"));
-                object.put("subtitle", rs.getString("subtitle"));
-                object.put("text", rs.getString("text"));
-                object.put("pdf", rs.getString("pdf"));
-                object.put("link", rs.getString("link"));
+
+            switch (req.getParameter("text")) {
+                case "Привет":
+                    object.put("response_text", "Здравствуйте");
+                    break;
+                case "Что на счет питсы?":
+                    object.put("response_text", "Ха ха ха. Я хочу питсу");
+                    break;
+                default:
+
             }
+
             object.put("success", true);
         } catch (Exception ex) {
             object.put("success", false);

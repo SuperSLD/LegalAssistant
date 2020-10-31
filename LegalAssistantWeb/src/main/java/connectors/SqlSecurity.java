@@ -5,7 +5,7 @@ package connectors;
  */
 public class SqlSecurity {
 
-    private static final String WHITE_LIST = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.: ";
+    private static final String WHITE_LIST = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.: -";
 
     /**
      * Проверка символов по белому списку.
