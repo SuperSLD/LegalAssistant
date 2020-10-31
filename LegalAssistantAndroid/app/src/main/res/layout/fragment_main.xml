@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:src="@drawable/main_image"
@@ -11,6 +12,27 @@
         android:layout_height="360dp">
 
     </ImageView>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="32sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_first_word"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:textSize="32sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMainRed"
+            android:text="@string/splash_second_word"/>
+    </LinearLayout>
     
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnConsult"
@@ -19,7 +41,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="37dp"
-        android:text="@string/consultation"
+        android:text="@string/need_consultation"
         style="@style/ButtonSolid"/>
 
     <androidx.appcompat.widget.AppCompatButton

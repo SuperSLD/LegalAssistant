@@ -5,16 +5,32 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorMainRed</item>
-        <item name="android:statusBarColor">@color/colorStatusBar</item>
-        <item name="android:windowLightStatusBar">true</item>
         <item name="android:autofilledHighlight" tools:targetApi="o">@android:color/transparent</item>
 
+    </style>
+
+    <style name="MaterialCardStyle">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/colorBorder</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="GradientCard">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/colorBorder</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
     </style>
 
     <style name="ToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/colorMainRed</item>
+        <item name="android:textColor">@color/colorDarkText</item>
     </style>
 
     <style name="ButtonSolid" parent="Widget.AppCompat.Button.Borderless">
@@ -41,6 +57,24 @@
         <item name="android:paddingEnd">0dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/button_red_border</item>
+    </style>
+
+    <style name="TextInputLayoutBordered" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="hintTextColor">@color/colorBorder</item>
+        <item name="android:background">@drawable/text_input_layout_selector</item>
+        <item name="android:gravity">top</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorDarkText</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
 

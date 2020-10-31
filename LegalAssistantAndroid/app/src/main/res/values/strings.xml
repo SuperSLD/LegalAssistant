@@ -2,6 +2,8 @@
     <string name="app_name">LegalAssistant</string>
     <string name="splash_first_word">Legal</string>
     <string name="splash_second_word">Assistant</string>
-    <string name="consultation">Нужна консультация</string>
+    <string name="need_consultation">Нужна консультация</string>
     <string name="ready_solutions">Готовые решения</string>
+    <string name="ready_solutions_info">Часто задаваемые вопросы, которые могут вам помочь</string>
+    <string name="consultation">Консультация</string>
 </resources>
