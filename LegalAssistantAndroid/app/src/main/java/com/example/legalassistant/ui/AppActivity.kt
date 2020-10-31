@@ -45,10 +45,11 @@ class AppActivity : MvpAppCompatActivity() {
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 decorView.systemUiVisibility = decorView.systemUiVisibility or
-                        View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                        View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR or
+                        View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
             }
 
-            statusBarColor = ContextCompat.getColor(context, R.color.colorNavigationBar)
+            statusBarColor = ContextCompat.getColor(context, R.color.colorStatusBar)
             navigationBarColor = ContextCompat.getColor(context, R.color.colorNavigationBar)
         }
     }

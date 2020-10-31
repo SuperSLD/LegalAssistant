@@ -14,4 +14,5 @@
 
     <color name="colorStatusBar">#7AF0F2F5</color>
     <color name="colorNavigationBar">#7AF0F2F5</color>
+    <color name="colorBorder">#E6EBF0</color>
 </resources>

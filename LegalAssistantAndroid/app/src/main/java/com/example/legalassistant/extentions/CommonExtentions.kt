@@ -7,6 +7,8 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 fun Fragment.hideKeyboard() {
@@ -20,4 +22,10 @@ fun Activity.hideKeyboard() {
 fun Context.hideKeyboard(view: View?) {
     val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
     inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
+}
+
+fun Context.getData() : String {
+    val data = Calendar.getInstance().time
+    val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+    return formatter.format(data)
 }

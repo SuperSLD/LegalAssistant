@@ -1,6 +1,9 @@
 package com.example.legalassistant.di
 
+import com.example.legalassistant.BuildConfig
 import com.example.legalassistant.common.CiceroneHolder
+import com.example.legalassistant.server.Api
+import com.example.legalassistant.server.ApiService
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import io.reactivex.rxjava3.schedulers.Schedulers.single
 import okhttp3.OkHttpClient
@@ -26,7 +29,7 @@ val appModule = module{
 
     single {
         get<Retrofit.Builder>()
-            //.baseUrl(BuildConfig.SERVER_URL)
+            .baseUrl(BuildConfig.SERVER_URL)
             .build()
     }
 
@@ -34,7 +37,11 @@ val appModule = module{
         CiceroneHolder()
     }
 
-   // single {
-       // get<Retrofit>().create(Api::class.java)
-   // }
+   single {
+        get<Retrofit>().create(Api::class.java)
+    }
+
+    single {
+        ApiService(get())
+    }
 }
