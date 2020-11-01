@@ -28,10 +28,10 @@ public class MessageResponseServlet extends HttpServlet {
                     object.put("response_text", "Здравствуйте");
                     break;
                 case "Что на счет питсы?":
-                    object.put("response_text", "Ха ха ха. Я хочу питсу");
+                    object.put("response_text", "Ха ха ха. Я хочу питсу.");
                     break;
                 default:
-
+                    object.put("response_text", "Попробуйте выразиться яснее.");
             }
 
             object.put("success", true);

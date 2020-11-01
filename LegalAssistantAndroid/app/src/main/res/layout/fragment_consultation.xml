@@ -23,7 +23,7 @@
             android:paddingTop="8dp"
             android:clipToPadding="false"/>
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/BottomNavBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,9 +57,9 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <ImageView
-                    android:id="@+id/sendMessage"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:id="@+id/ivSendMessage"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
@@ -73,7 +73,7 @@
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </RelativeLayout>
 

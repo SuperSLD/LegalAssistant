@@ -24,8 +24,8 @@ fun Context.hideKeyboard(view: View?) {
     inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
 }
 
-fun Context.getData() : String {
+fun getDate() : String {
     val data = Calendar.getInstance().time
-    val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+    val formatter = SimpleDateFormat("hh:mm", Locale.getDefault())
     return formatter.format(data)
 }

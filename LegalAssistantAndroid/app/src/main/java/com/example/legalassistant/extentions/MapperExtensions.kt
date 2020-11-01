@@ -1,7 +1,10 @@
 package com.example.legalassistant.extentions
 
+import com.example.legalassistant.models.db.MessageRealmModel
+import com.example.legalassistant.models.human.MessageHuman
 import com.example.legalassistant.models.human.SolutionHuman
 import com.example.legalassistant.models.server.SolutionResponse
+import io.realm.RealmResults
 
 fun MutableList<SolutionResponse>?.toSolutionsHuman(): MutableList<SolutionHuman> {
 
@@ -19,4 +22,27 @@ fun MutableList<SolutionResponse>?.toSolutionsHuman(): MutableList<SolutionHuman
     }?.toMutableList()
 
     return solutions
+}
+
+fun MessageHuman.toMessageRealmModel(id: Int):MessageRealmModel {
+    return MessageRealmModel(
+        id = id,
+        text = text,
+        date = data,
+        incoming = incoming)
+}
+
+fun RealmResults<MessageRealmModel>.toMessageHuman() : MutableList<MessageHuman> {
+    val messages: MutableList<MessageHuman> = mutableListOf()
+    this.map { realmModel ->
+        messages.add(
+            MessageHuman(
+                text = realmModel.text,
+                data = realmModel.date,
+                incoming = realmModel.incoming
+            )
+        )
+    }.toMutableList()
+
+    return messages
 }
